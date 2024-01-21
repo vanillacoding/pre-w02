@@ -2,7 +2,7 @@
   "use strict";
 
   describe("[연습게임] 과제방식 맛보기 🍽️", function () {
-    describe("homeworks/1_practice.js 파일을 열어주세요.", function () {
+    describe("코드 에디터에서 homeworks/1_practice.js 파일을 열어주세요.", function () {
       it("모르는 문법은 크게 신경쓰지 않아도 됩니다. input, output, 그리고 '바코'에만 집중하세요.", function () {
         const input = 1;
         const output = 1;

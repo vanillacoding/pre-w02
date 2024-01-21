@@ -2,7 +2,7 @@
   "use strict";
 
   describe("문자열 다루기 🔠", function () {
-    describe("homeworks/4_string.js 파일을 열어주세요.", function () {
+    describe("코드 에디터에서 homeworks/4_string.js 파일을 열어주세요.", function () {
       it("문자열 만들기", function () {
         // 공백 주의.
         const today = "토요일";

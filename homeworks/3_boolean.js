@@ -2,7 +2,7 @@
   "use strict";
 
   describe("불리언 다루기 🟢 ⚫️", function () {
-    describe("homeworks/3_boolean.js 파일을 열어주세요.", function () {
+    describe("코드 에디터에서 homeworks/3_boolean.js 파일을 열어주세요.", function () {
       it("NOT 논리 연산자", function () {
         const input = !false;
         const output = 바코;

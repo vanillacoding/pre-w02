@@ -2,7 +2,7 @@
   "use strict";
 
   describe("끝판왕 깨기 👑", function () {
-    describe("homeworks/5_advanced.js 파일을 열어주세요.", function () {
+    describe("코드 에디터에서 homeworks/5_advanced.js 파일을 열어주세요.", function () {
       it("반복문 #1", function () {
         let result = 0;
 

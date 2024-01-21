@@ -2,7 +2,7 @@
   "use strict";
 
   describe("숫자 다루기 🎲", function () {
-    describe("homeworks/2_number.js 파일을 열어주세요.", function () {
+    describe("코드 에디터에서 homeworks/2_number.js 파일을 열어주세요.", function () {
       it("나머지 연산자", function () {
         const input = 10 % 2;
         const output = 바코;
