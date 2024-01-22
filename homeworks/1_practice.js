@@ -14,7 +14,7 @@
         // 아랫줄에서 '바코'를 지우고, 그 자리에 숫자 2를 입력하고 저장하세요.
         // 그리고 과제 html 페이지를 새로고침 해보세요.
         const input = 1 + 1;
-        const output = 바코;
+        const output = 2;
 
         expect(input).to.equal(output);
       });
@@ -23,7 +23,7 @@
         // 아랫줄에서 '바코'를 지우고 false라고 입력하고 저장하세요.
         // 그리고 과제 html 페이지를 새로고침 해보세요.
         const input = 7 < 5;
-        const output = 바코;
+        const output = false;
 
         expect(input).to.equal(output);
       });
