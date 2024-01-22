@@ -5,7 +5,7 @@
     describe("코드 에디터에서 homeworks/2_number.js 파일을 열어주세요.", function () {
       it("나머지 연산자", function () {
         const input = 10 % 2;
-        const output = 바코;
+        const output = 0;
 
         expect(input).to.equal(output);
       });
@@ -13,7 +13,7 @@
       it("나머지 연산자와 대입 연산자", function () {
         const a = 10 % 3;
         const input = a;
-        const output = 바코;
+        const output = 1;
 
         expect(input).to.equal(output);
       });
