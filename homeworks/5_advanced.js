@@ -60,7 +60,7 @@
 
         const guess = 바코;
 
-        expect(input).to.equal(guess);
+        expect(result).to.equal(guess);
       });
 
       it("문자열 반복, 자르기, 붙이기", function () {
