@@ -17,7 +17,6 @@
         expect(result).to.equal(guess);
       });
 
-      // 템플릿 리터럴은 ES6에 도입된 문자열 표기법으로 내장된 표현식을 허용한다.
       it("문자열 만들기", function () {
         const today = "토요일";
         const result = `나는 ${today}에 일한다!`;
@@ -37,7 +36,7 @@
         const str = "something";
         const result = `${str[0]}${str[3]}${str[1]}`;
         const guess = "seo";
-        // 문자열의 순서는 0부터 시작한다.
+
         expect(result).to.equal(guess);
       });
 
@@ -61,7 +60,7 @@
         const str = "I am a student";
         const result = str.indexOf("a");
         const guess = 2;
-        // String.prototype.indexOf()는 주어진 값과 일치하는 첫 번째 인덱스를 반환한다.
+
         expect(result).to.equal(guess);
       });
 
@@ -69,7 +68,7 @@
         const str = "HunGry?";
         const result = str.toLowerCase();
         const guess = "hungry?";
-        // String.prototype.toLowerCase()는 문자열을 모두 소문자로 변환하여 반환한다.
+
         expect(result).to.equal(guess);
       });
 
@@ -77,7 +76,7 @@
         const str = "ha";
         const result = str.repeat(5);
         const guess = "hahahahaha";
-        // String.prototype.repeat()는 문자열을 주어진 횟수만큼 반복하여 붙인 다음 반환한다.
+
         expect(result).to.equal(guess);
       });
 
@@ -85,7 +84,7 @@
         const str = "hello, kenny";
         const result = str.slice(7, 10);
         const guess = "ken";
-        // String.prototype.slice()는 두 가지 매개변수를 통해 문자열의 beginIndex 부터 endIndex 전까지 잘라서 추출한 다음 반환한다.
+
         expect(result).to.equal(guess);
       });
     });
