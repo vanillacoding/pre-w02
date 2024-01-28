@@ -103,6 +103,7 @@
       });
 
       it("비교 연산자, 연산자 우선순위, 소수점 다루기 (부동 소수점)", function () {
+        // 20240128 - Question - https://stackoverflow.com/questions/588004/is-floating-point-math-broken
         const a = 0.1;
         const b = 0.2;
         const result = a + b === 0.3;
