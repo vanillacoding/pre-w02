@@ -11,28 +11,28 @@
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = 7 + "3";
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = "7" + 3;
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 빼는 경우의 형변환", function () {
         const result = "7" - 3;
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.equal(guess);
       });
 
       it("||, && 논리 연산자", function () {
         const result = ("0" && 30) || false;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -45,7 +45,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 20;
 
         expect(result).to.equal(guess);
       });
@@ -58,7 +58,7 @@
           result += str[i];
         }
 
-        const guess = 바코;
+        const guess = "Vanilla Coding";
 
         expect(result).to.equal(guess);
       });
@@ -67,7 +67,7 @@
         const a = "ha".repeat(3);
         const b = a.split("a");
         const result = b.join(":");
-        const guess = 바코;
+        const guess = "h:h:h:";
 
         expect(result).to.equal(guess);
       });
@@ -82,7 +82,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 12;
 
         expect(result).to.equal(guess);
       });
@@ -91,13 +91,13 @@
         let a = 0;
 
         for (let i = 0; i < 10; i++) {
-          if (i % 3 === 0 || i % 4 === 0) {
+          if (i % 3 === 0 || i % 4 === 0) { // i는 0에서 9까지 1개씩 커니는데 i가 3이나 4의 배수일 때! i=3~a=3, i=4~a=7 ~ i=6~a=13, i=8~a=21, i=9~a=30
             a += i;
           }
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -106,7 +106,7 @@
         const a = 0.1;
         const b = 0.2;
         const result = a + b === 0.3;
-        const guess = 바코;
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
