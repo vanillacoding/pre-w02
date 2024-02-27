@@ -11,7 +11,7 @@
 
       it("나머지 연산자", function () {
         const result = 10 % 2;
-        const guess = 1;
+        const guess = 0;
 
         expect(result).to.equal(guess);
       });
@@ -19,7 +19,8 @@
       it("나머지 연산자, 대입 연산자, 후위 증감 연산자", function () {
         let a = 10 % 3;
         const result = a++;
-        const guess = 바코;
+        //후위 증감 연산자 사용, result = 1
+        const guess = 1;
 
         expect(result).to.equal(guess);
       });
@@ -27,7 +28,8 @@
       it("나머지 연산자, 대입 연산자, 전위 증감 연산자", function () {
         let a = 10 % 3;
         const result = ++a;
-        const guess = 바코;
+        //전위 증감 사용자 사용, result = 2
+        const guess = 2;
 
         expect(result).to.equal(guess);
       });
@@ -37,7 +39,8 @@
         a -= 5;
 
         const result = ++a;
-        const guess = 바코;
+        //전위 증감 사용자 사용, result = 6
+        const guess = 6;
 
         expect(result).to.equal(guess);
       });
@@ -47,7 +50,8 @@
         a = a / 5;
 
         const result = a > 2;
-        const guess = 바코;
+        //a = 2; 
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -55,7 +59,8 @@
       it("나머지 연산자, 대입 연산자, 숫자 변환", function () {
         const a = "2";
         const result = Number(a);
-        const guess = 바코;
+        //2
+        const guess = 2;
 
         expect(result).to.equal(guess);
       });
@@ -63,7 +68,8 @@
       it("NOT 논리 연산자", function () {
         const a = 45;
         const result = !a;
-        const guess = 바코;
+        //result = false
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -71,7 +77,8 @@
       it("NOT 논리 연산자", function () {
         const a = 45;
         const result = !!a;
-        const guess = 바코;
+        //!a = false, !!a = true
+        const guess = true;
 
         expect(result).to.equal(guess);
       });
@@ -79,7 +86,8 @@
       it("NOT 논리 연산자", function () {
         const a = 0;
         const result = !!a;
-        const guess = 바코;
+        //!a = true, !!a = false
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -87,42 +95,51 @@
       it("NOT 논리 연산자", function () {
         const a = -0;
         const result = !!a;
-        const guess = 바코;
+        //!a = true, !!a = false
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
 
       it("&& 논리 연산자", function () {
         const result = 30 && 0;
-        const guess = 바코;
+        //우측으로 진행하며 falsy 값 return -> 0
+        const guess = 0;
 
         expect(result).to.equal(guess);
       });
 
       it("&& 논리 연산자", function () {
         const result = 0 && 10;
-        const guess = 바코;
+        //falsy 값 만났을 시 바로 return
+        const guess = 0;
 
         expect(result).to.equal(guess);
       });
 
       it("|| 논리 연산자", function () {
         const result = 7 || 3;
-        const guess = 바코;
+        //우측으로 진행하며 truthy 값 만났을시 return -> 7
+        const guess = 7;
 
         expect(result).to.equal(guess);
       });
 
       it("|| 논리 연산자", function () {
         const result = NaN || 3;
-        const guess = 바코;
+        //우측으로 진행하며 truthy 값 만났을시 return -> 3
+        const guess = 3;
 
         expect(result).to.equal(guess);
       });
 
       it("||, && 논리 연산자", function () {
         const result = 7 || (3 && 10);
-        const guess = 바코;
+        /*
+        (3&&10) -> 10 falsy가 없을경우 우측 truthy값 return
+        7||10 -> 처음 truthy 값 return
+        */
+        const guess = 7;
 
         expect(result).to.equal(guess);
       });
