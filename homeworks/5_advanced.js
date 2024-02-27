@@ -11,28 +11,35 @@
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = 7 + "3";
-        const guess = 바코;
+        //암묵적 타입변환으로 둘다 문자열로 바뀜
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = "7" + 3;
-        const guess = 바코;
+        //암묵적 타입변환으로 둘다 문자열로 바뀜
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 빼는 경우의 형변환", function () {
         const result = "7" - 3;
-        const guess = 바코;
+        //-는 암묵적 타입 변환 발생, 숫자열로 변경
+        const guess = 4;
 
         expect(result).to.equal(guess);
       });
 
       it("||, && 논리 연산자", function () {
         const result = ("0" && 30) || false;
-        const guess = 바코;
+        /*
+        ("0" && 30) = 30
+        30|| false = 30
+        */
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -43,9 +50,10 @@
         for (let i = 0; i < 10; i += 2) {
           a += i;
         }
-
+        //5번 반복, 0 + 0 + 2 + 4 + 6 + 8
         const result = a;
-        const guess = 바코;
+        //a = 20
+        const guess = 20;
 
         expect(result).to.equal(guess);
       });
@@ -54,20 +62,24 @@
         const str = "gnidoC allinaV";
         let result = "";
 
+        //i = 13 역순으로 0까지 문자열 합.
         for (let i = str.length - 1; i >= 0; i--) {
           result += str[i];
         }
 
-        const guess = 바코;
+        const guess = "Vanilla Coding";
 
         expect(result).to.equal(guess);
       });
 
       it("문자열 반복, 자르기, 붙이기", function () {
         const a = "ha".repeat(3);
+        //"hahaha"
         const b = a.split("a");
+        //["h","h","h",""]
         const result = b.join(":");
-        const guess = 바코;
+        //"h:h:h:"
+        const guess = "h:h:h:";
 
         expect(result).to.equal(guess);
       });
@@ -76,13 +88,14 @@
         let a = 0;
 
         for (let i = 0; i < 10; i += 2) {
+          //4의 배수 4, 8
           if (i % 4 === 0) {
             a += i;
           }
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 12;
 
         expect(result).to.equal(guess);
       });
@@ -91,13 +104,14 @@
         let a = 0;
 
         for (let i = 0; i < 10; i++) {
+          //3의 배수 혹은 4의 배수 3, 4, 6, 8, 9
           if (i % 3 === 0 || i % 4 === 0) {
             a += i;
           }
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -109,8 +123,10 @@
          */
         const a = 0.1;
         const b = 0.2;
+        //JS는 소수점 더하기시 오차 발생
+        //이진수로 소수점 표현시 오차가 생김
         const result = a + b === 0.3;
-        const guess = 바코;
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -127,10 +143,14 @@
         let result = 0;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
-
+        [...target].forEach((val)=>{
+          if(val === "코"){
+            result++;
+          }
+        })
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
-        expect(result).to.equal(13);
+        expect(result).to.equal(8);
       });
 
       it("소수 판별하기", function () {
@@ -145,7 +165,21 @@
         let result = false;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
-
+        function isPrimeNumber(target){
+          if(0 < target && target < 3){
+            result = false;
+            return result;
+          }
+          for(let i = 2; i < target; i++){
+            if(target % i === 0){
+              result = true;
+              break;
+            }
+          }
+          return result;
+        }
+        isPrimeNumber(target);
+        console.log(result);
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(false);
