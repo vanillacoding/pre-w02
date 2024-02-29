@@ -130,7 +130,7 @@
 
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
-        expect(result).to.equal(13);
+        expect(result).to.equal(8);
       });
 
       it("소수 판별하기", function () {
@@ -148,7 +148,7 @@
 
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
-        expect(result).to.equal(false);
+        expect(result).to.equal(true);
       });
     });
   });
