@@ -127,6 +127,9 @@
         let result = 0;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
+        for (let i = 0; i < target.length; i++) {
+          if (target[i] === "코") result += 1;
+        }
 
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
@@ -145,7 +148,19 @@
         let result = false;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
+        for (let i = 2; i < target; i++) {
+          if (target === 2) {
+            result = true;
+            break;
+          }
 
+          if (target % i === 0) {
+            result = false;
+            break;
+          } else {
+            result = true;
+          }
+        }
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(true);
