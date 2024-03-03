@@ -144,6 +144,8 @@
         toFixed(1) - 소숫점 첫째자리까지 반올림 처리
         toFixed(2) - 소숫점 둘째자리까지 반올림 처리
         toFixed(3) - 소숫점 셋째자리까지 반올림 처리
+        
+        solution =
         Math.round()
         Math.round((a+b)*10)/10 - 소숫점 첫째자리까지 반올림 처리
         Math.round((a+b)*100)/100 - 소숫점 둘째자리까지 반올림 처리
