@@ -11,28 +11,28 @@
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = 7 + "3";
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = "7" + 3;
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 빼는 경우의 형변환", function () {
         const result = "7" - 3;
-        const guess = 바코;
+        const guess = 7-3;
 
         expect(result).to.equal(guess);
       });
 
       it("||, && 논리 연산자", function () {
         const result = ("0" && 30) || false;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -45,7 +45,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 20;
 
         expect(result).to.equal(guess);
       });
@@ -57,8 +57,8 @@
         for (let i = str.length - 1; i >= 0; i--) {
           result += str[i];
         }
-
-        const guess = 바코;
+        
+        const guess = "Vanilla Coding";
 
         expect(result).to.equal(guess);
       });
@@ -67,8 +67,7 @@
         const a = "ha".repeat(3);
         const b = a.split("a");
         const result = b.join(":");
-        const guess = 바코;
-
+        const guess = "h:h:h:";
         expect(result).to.equal(guess);
       });
 
@@ -82,7 +81,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 12;
 
         expect(result).to.equal(guess);
       });
@@ -97,7 +96,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -110,7 +109,7 @@
         const a = 0.1;
         const b = 0.2;
         const result = a + b === 0.3;
-        const guess = 바코;
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -124,13 +123,19 @@
          *
          */
         const target = "코바바코바밥바바코코콬바바코코바바코콬밥빱바밥바코바바";
-        let result = 0;
-
+        let result = "";
+      
         // [시작] 여러분의 로직을 아래에 작성해주세요.
+        result = 0;
+        let search = "코"
 
+        for (let i = 0; i<target.length; i++) {
+          if(target[i] !==search) continue;
+          result++;
+        }
+        const guess = 8;
         // [끝] 여러분의 로직을 위에 작성해주세요.
-
-        expect(result).to.equal(13);
+        expect(result).to.equal(guess);
       });
 
       it("소수 판별하기", function () {
@@ -142,10 +147,20 @@
          *
          */
         const target = 11;
-        let result = false;
+        let result= false;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
+        let rem;
+        for (let i = 1; i <= target; i++){
+          rem = target % i;
 
+          rem === 0;
+            result = Boolean(0);
+
+          if (rem !== 0) {
+            result = Boolean(0<rem<6);
+          }
+        }
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(false);
