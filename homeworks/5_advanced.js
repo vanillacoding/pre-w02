@@ -11,28 +11,28 @@
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = 7 + "3";
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = "7" + 3;
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 빼는 경우의 형변환", function () {
         const result = "7" - 3;
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.equal(guess);
       });
 
       it("||, && 논리 연산자", function () {
         const result = ("0" && 30) || false;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -45,7 +45,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 20;
 
         expect(result).to.equal(guess);
       });
@@ -58,7 +58,7 @@
           result += str[i];
         }
 
-        const guess = 바코;
+        const guess = "Vanilla Coding";
 
         expect(result).to.equal(guess);
       });
@@ -67,7 +67,7 @@
         const a = "ha".repeat(3);
         const b = a.split("a");
         const result = b.join(":");
-        const guess = 바코;
+        const guess = "h:h:h:";
 
         expect(result).to.equal(guess);
       });
@@ -82,7 +82,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 12;
 
         expect(result).to.equal(guess);
       });
@@ -97,7 +97,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -106,11 +106,16 @@
         /*
          * 부동 소수점에 대한 내용과 함께
          * 아래 연산 결과에 대한 자세한 원리를 최대한 정확히 조사해보세요.
+         * 
+         * 부동소수점이란: 일상에서 사용하는 10진법을 컴퓨터가 처리하는 2진법으로 변환하는 과정에서 소수 중 일부는 무한소수화가 된다.
+         * 그 과정중 일부자릿수 생략, 반올림 처리 등의 사유로 연산결과에 오차가 생긴다.
+         * 이를 해결하기 위한 방법으로는 toFixed() 메서드를 사용해 String값으로 반환해준 뒤 
+         * Number() 함수를 통해 숫자값으로의 재변환을 거치는 수가 있다.
          */
         const a = 0.1;
         const b = 0.2;
         const result = a + b === 0.3;
-        const guess = 바코;
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -127,7 +132,11 @@
         let result = 0;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
-
+          for(let a = 0; a < target.length; a++){
+            if(target[a] === "코"){
+              result += 1
+            }
+          }
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(8);
@@ -148,7 +157,15 @@
         let result = false;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
-
+        let i = 0
+        for(let a = 1; a <= target; a++){
+          if(target % a === 0){
+            i += 1;
+            if(i === 2){
+              result = true;
+            }
+          }
+        }
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(true);
