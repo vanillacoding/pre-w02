@@ -11,28 +11,28 @@
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = 7 + "3";
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 더하는 경우의 형변환", function () {
         const result = "7" + 3;
-        const guess = 바코;
+        const guess = "73";
 
         expect(result).to.equal(guess);
       });
 
       it("다른 자료형을 빼는 경우의 형변환", function () {
         const result = "7" - 3;
-        const guess = 바코;
+        const guess = 4;
 
         expect(result).to.equal(guess);
       });
 
       it("||, && 논리 연산자", function () {
         const result = ("0" && 30) || false;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -45,7 +45,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 20;
 
         expect(result).to.equal(guess);
       });
@@ -58,7 +58,7 @@
           result += str[i];
         }
 
-        const guess = 바코;
+        const guess = "Vanilla Coding";
 
         expect(result).to.equal(guess);
       });
@@ -67,7 +67,7 @@
         const a = "ha".repeat(3);
         const b = a.split("a");
         const result = b.join(":");
-        const guess = 바코;
+        const guess = "h:h:h:";
 
         expect(result).to.equal(guess);
       });
@@ -82,7 +82,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 12;
 
         expect(result).to.equal(guess);
       });
@@ -97,7 +97,7 @@
         }
 
         const result = a;
-        const guess = 바코;
+        const guess = 30;
 
         expect(result).to.equal(guess);
       });
@@ -110,7 +110,7 @@
         const a = 0.1;
         const b = 0.2;
         const result = a + b === 0.3;
-        const guess = 바코;
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
@@ -127,7 +127,11 @@
         let result = 0;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
-
+        for (let i = 0; i < target.length + 1; i++){
+          if (target[i] === "코") {
+            result++;
+          }
+        }
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(8);
@@ -148,7 +152,11 @@
         let result = false;
 
         // [시작] 여러분의 로직을 아래에 작성해주세요.
-
+        for (let i = 1; i <= target; i++){
+          if (target % i === 0){
+            result = true;
+          }
+        }
         // [끝] 여러분의 로직을 위에 작성해주세요.
 
         expect(result).to.equal(true);
