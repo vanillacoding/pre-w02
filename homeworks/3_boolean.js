@@ -11,70 +11,80 @@
 
       it("NOT 논리 연산자", function () {
         const result = !false;
-        const guess = 바코;
+        //부정 연산자 사용
+        const guess = true;
 
         expect(result).to.equal(guess);
       });
 
       it("NOT 논리 연산자", function () {
         const result = !!true;
-        const guess = 바코;
+        //부정 연산자 2번 사용(false -> true)
+        const guess = true;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean(NaN);
-        const guess = 바코;
+        //NaN은 falsy 
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean(undefined + 20);
-        const guess = 바코;
+        //undefined + 20 = NaN -> falsy
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean("hello");
-        const guess = 바코;
+        //문자열은 truthy
+        const guess = true;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean("   ");
-        const guess = 바코;
+        //띄어쓰기도 truthy
+        const guess = true;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean("");
-        const guess = 바코;
+        //빈 문자열은 falsy
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean(-0);
-        const guess = 바코;
+        //-0은 falsy
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean("null");
-        const guess = 바코;
+        //null은 falsy 그러나 문자열이므로 truthy
+        const guess = true;
 
         expect(result).to.equal(guess);
       });
 
       it("Truthy/Falsy 판별", function () {
         const result = Boolean(null);
-        const guess = 바코;
+        //null은 falsy
+        const guess = false;
 
         expect(result).to.equal(guess);
       });
